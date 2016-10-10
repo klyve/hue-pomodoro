@@ -1,0 +1,87 @@
+doctype html
+html(lang="en")
+  head
+    title= pomodoro
+    link(rel="stylesheet" type="text/css" href="css/style.css")
+  body
+    
+    .container
+      .card.scene-home
+        h1 Pomodoro Timer
+        button(data-to="timermenu").scene Timer
+        br
+        br
+        button(data-to="finished").scene.blue Finished Pomodoro's
+        br
+        br
+        button(data-to="settings").scene.gray Settings
+      .card.scene-timermenu
+        h1 Pomodoro
+        button(data-to="timer", name="pomodoro").scene.timerstart Start Pomodoro
+        br
+        br
+        button(data-to="timer", name="shortbreak").scene.timerstart Start Short break
+        br
+        br
+        button(data-to="timer", name="longbreak").scene.timerstart Start Long break
+        br
+        br
+        button(data-to="home").scene.blue Go back
+      .card.scene-timer
+        h1.time 24:35
+        button.red.pausetimer Stop
+        button.red.unpausetimer Resume
+      .card.scene-finished
+        h1 Today's pomodoro
+        ul.pomodorolist
+          li 
+            span 10:11-12:30
+            span.right.completed Completed
+          li 
+            span 10:11-12:30
+            span.right.failed Failed
+          li 
+            span 10:11-12:30
+            span.right.completed Completed
+          li 
+            span 10:11-12:30
+            span.right.failed Failed
+          li 
+            span 10:11-12:30
+            span.right.completed Completed
+        button(data-to="home").scene.blue Go back
+        
+      .card.settings.scene-settings
+        h1 Settings
+        label.title Bridge ip
+        input(type="text" value="10.0.0.137" name="bridge")
+        label.title Username
+        input(type="text" value="hxNRLoGYGMjtCdiBwgihuKqpKVT4-yH8el0hsgSY" name="username")
+        label.title Light list (comma ceparated)
+        input(type="text" value="1" name="lights")
+        label.title Pomodoro time ( minutes )
+        input(type="text" value="30" name="pomodoro")
+        label.title Short break ( minutes )
+        input(type="text" value="5" name="shortbreak")
+        label.title Long break ( minutes )
+        input(type="text" value="10" name="longbreak")
+        label.title Pomodoro's to long break
+        input(type="text" value="4" name="tolongbreak")
+        br
+        //- .flipswitch
+        //-   input#fs.flipswitch-cb(type='checkbox', name='flipswitch', checked='')
+        //-   label.flipswitch-label(for='fs')
+        //-     .flipswitch-inner
+        //-     .flipswitch-switch
+        br
+        br
+        button(data-to="home").scene.savesettings Save
+        br
+        br
+        button(data-to="home").scene.half.red Back
+        button.half.blue.testbtn Test
+      
+        
+    script(type='text/javascript' src="timer.js")
+    script(type='text/javascript' src="router.js")
+    script(type='text/javascript' src="main.js")

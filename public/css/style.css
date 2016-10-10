@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+  background: #34495E;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+
+.container {
+  width: 460px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  display: none;
+}
+.card.active {
+  display: block;
+}
+h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+
+label.title {
+  display: block;
+  font-size: small;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 0.35em;
+  float: left;
+}
+.card input[type="text"] {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+.card button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.card button.half {
+  width: 50%;
+  display: inline-block;
+}
+.card button.red {
+  background: #D64541;
+}
+.card button.blue {
+  background: #3498DB;
+}
+
+
+.card button:hover,.card button:active,.card button:focus {
+  background: #43A047;
+}
+.card button.red:hover,.card button.red:active,.card button.red:focus {
+  background: #C0392B;
+}
+.card button.blue:hover,.card button.blue:active,.card button.blue:focus {
+  background: #19B5FE;
+}
+
+
+ul.pomodorolist {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+
+}
+ul.pomodorolist li {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #d3d4d5;
+  margin-bottom: 2px;
+}
+span.left {
+  float: left;
+}
+span.right {
+  float: right;
+}
+ul.pomodorolist li span.completed {
+  color: #2980b9;
+}
+ul.pomodorolist li span.failed {
+  color: #e74c3c;
+}
+ul.pomodorolist li:last-child {
+  border-bottom: 0;
+}
+
+
+
+
+
+
+
+.flipswitch {
+  position: relative;
+  width: 75px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 0px;
+}
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -ms-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 24px;
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flipswitch-inner:before {
+  content: "ON";
+  padding-right: 26px;
+  background-color: #308AFF;
+  color: #FFFFFF;
+}
+.flipswitch-inner:after {
+  content: "OFF";
+  padding-right: 8px;
+  background-color: #EBEBEB;
+  color: #888888;
+  text-align: right;
+}
+.flipswitch-switch {
+  width: 33px;
+  margin: -4.5px;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 48px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}
